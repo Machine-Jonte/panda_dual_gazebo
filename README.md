@@ -4,3 +4,6 @@ This package is an abomination between some existing solutions online. It combin
 
 ## Guide
 Use the xacro file dual_panda.urdf.xacro when building the MoveIt! configuration.
+
+## Additional information
+Do not launch Gazebo using the launch file in this package! Use the launch file from the MoveIt! package. The default PID controller in this package is not valid either.
