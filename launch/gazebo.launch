@@ -1,0 +1,8 @@
+<launch>
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find panda_dual_gazebo)/robots/dual_panda.urdf.xacro"/>
+
+	<node name="spawn" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model panda"/>
+	<rosparam command="load" file="$(find panda_dual_gazebo)/config/default.yaml"/>
+
+
+</launch>

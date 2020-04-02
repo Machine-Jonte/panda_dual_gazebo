@@ -2,9 +2,11 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/</robotNamespace>
+      <!-- <robotNamespace></robotNamespace> -->
     </plugin>
   </gazebo>
+
+
   
 	<gazebo reference="${arm_id}_link0"/>
 	<gazebo reference="${arm_id}_link1"/>
@@ -16,12 +18,46 @@
 	<gazebo reference="${arm_id}_link7"/>
 	<gazebo reference="${arm_id}_link8"/>
 
+  <gazebo reference="${arm_id}_link0">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link1">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link2">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link3">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link4">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link5">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link6">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${arm_id}_link7">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+
 	 <transmission name="${arm_id}_joint1_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint1">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint1_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -29,9 +65,10 @@
   <transmission name="${arm_id}_joint2_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint2">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint2_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -39,9 +76,10 @@
   <transmission name="${arm_id}_joint3_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint3">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint3_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -49,9 +87,10 @@
   <transmission name="${arm_id}_joint4_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint4">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint4_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -59,9 +98,10 @@
   <transmission name="${arm_id}_joint5_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint5">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint5_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -69,9 +109,10 @@
   <transmission name="${arm_id}_joint6_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint6">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint6_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -79,9 +120,10 @@
   <transmission name="${arm_id}_joint7_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="${arm_id}_joint7">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="${arm_id}_joint7_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
