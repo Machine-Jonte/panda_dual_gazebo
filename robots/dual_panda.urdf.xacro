@@ -16,7 +16,13 @@
     <xacro:arg name="gazebo" value="${gazebo}"/>
 	</xacro:include>
   <xacro:include filename="$(find panda_dual_gazebo)/robots/hand.xacro"/>
-	
+  
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <!-- <robotNamespace>${arm_id}</robotNamespace> -->
+    </plugin>
+  </gazebo>
+
 
   <!-- box shaped table as base_table for the 2 Pandas -->
   <link name="base">

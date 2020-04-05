@@ -1,9 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
 
-	<gazebo reference="${ns}_hand"/>
+  <!-- <gazebo> -->
+    <!-- <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"> -->
+      <!-- <robotNamespace></robotNamespace> -->
+    <!-- </plugin> -->
+  <!-- </gazebo> -->
+
+	<!-- <gazebo reference="${ns}_hand"/> -->
 	<gazebo reference="${ns}_leftfinger"/>
 	<gazebo reference="${ns}_rightfinger"/>
+<!-- 
+  <gazebo reference="${ns}_hand">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo> -->
+  <gazebo reference="${ns}_leftfinger">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
+  <gazebo reference="${ns}_rightfinger">
+   <mu1>0.61</mu1>
+   <mu2>0.61</mu2>
+  </gazebo>
 
 	<transmission name="${ns}_finger_joint1_trans">
     <type>transmission_interface/SimpleTransmission</type>
